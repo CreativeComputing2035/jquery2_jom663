@@ -13,9 +13,37 @@ $(document).ready(function(){ //Run the following after the page is ready.
     $("#myList li:nth-child(4)").on("click", myFunction3);
     $("#myList li:nth-child(5)").one("click", function(evt) {
         myFunction4("#square4");
-                                   });
-    $("#square4").hide();
+        $("#square4").hide(); });
+    
+    $("#square1").click(function(){
+        $("#square1").text("Among individuals, as among nations, respect for the rights of others is peace.");
+    });
+    $("#square1").dblclick(function(){
+       $("#square1").text("A day without sunshine is like, you know, night.");
+    });
+     $("#square2").mouseover(function(){
+    $("#square3").animate({width: '100px'}, "slow");
+     $("#square3").animate({width: '600px'}, "slow");
+     $("#square3").animate({width: '100px'}, "slow");
+     $("#square3").animate({width: '600px'}, "slow");
+    });
+    $("#btn1").on("click",function(evt){
+        console. log($("#input").val())
+    });
+     $("#btn1").on("click",function(evt){
+         var myBox = $("#input").val();
+         var myColor = $("#input2").val();
+         if (myBox == 1){
+         $("#squarep1").css("background-color", myColor)};
+         if (myBox == 2){
+         $("#squarep2").css("background-color", myColor)};
+         if (myBox == 3){
+         $("#squarep3").css("background-color", myColor)};
+        
+    });
 });
+
+
 //-------------------------------------------------------------------
 //The code below are functions that will only run when called by name.
 function swapMe() {
@@ -42,27 +70,3 @@ function myFunction4(myObject) {
         .animate({top: '-=400px',
                   height: '500px'}, "slow");
 }
-$(document).ready(function(){
-    $("#square1").click(function(){
-        $("#square1").text("Do not take life too seriously. You will never get out of it alive.");
-    });
-});
-
-$(document).ready(function(){
-    $("#square1").dblclick(function(){
-       $("#square1").text("A day without sunshine is like, you know, night.");
-    });
-});
-
-$(document).ready(function(){
-    $("#square2").mouseover(function(){
-    $("#square3").animate({width: '100px'}, "slow");
-     $("#square3").animate({width: '600px'}, "slow");
-     $("#square3").animate({width: '100px'}, "slow");
-     $("#square3").animate({width: '600px'}, "slow");
-    });
-});
-$("#colorpicker").on("change",function(){
-    $("#btn1").click(function(){
-    $(".myclass").css("color",$("#colorpicker").val());
-});
